@@ -1,4 +1,4 @@
-package com.springwebtest.springwebtest;
+package com.springwebtest.springwebtest.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
