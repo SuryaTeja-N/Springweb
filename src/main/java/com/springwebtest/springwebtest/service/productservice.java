@@ -1,5 +1,6 @@
 package com.springwebtest.springwebtest.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,10 +11,10 @@ import com.springwebtest.springwebtest.model.product;
 @Service
 public class productservice {
     // let make a list of dummy products
-    List<product> products = Arrays.asList(
+    List<product> products = new ArrayList<>( Arrays.asList(
             new product(1, "p1", 100),
             new product(2, "p2", 200),
-            new product(3, "p3", 300));
+            new product(3, "p3", 300)));
 
     public List<product> getProducts() {
         return products;
@@ -26,6 +27,10 @@ public class productservice {
                 return p;
             }
         }
-        return null;
+        return new product(69, "dummy product", 169);
+    }
+
+    public void addProduct(product p) {
+        products.add(p);
     }
 }
