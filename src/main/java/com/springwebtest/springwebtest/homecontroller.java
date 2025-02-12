@@ -10,4 +10,8 @@ public class homecontroller {
     public String greet(){
         return "Hi!, This is Surya Teja";
     }
+    @RequestMapping("/about")
+    public String about(){
+        return "Hi!, This is about Surya Teja";
+    }
 }
