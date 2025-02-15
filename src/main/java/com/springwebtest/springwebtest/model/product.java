@@ -1,10 +1,23 @@
 package com.springwebtest.springwebtest.model;
 
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Component
+@Entity
 public class product {
+    
+    @Id
     private int prodId;
     private String prodName;
     private int price;
-
+    
+    /* no-argument constructor */
+    public product() {
+    }
+    
     /* constructor */
     public product(int prodId, String prodName, int price) {
         this.prodId = prodId;
